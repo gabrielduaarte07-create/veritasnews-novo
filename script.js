@@ -995,4 +995,3 @@ window.onload = () => {
     navegar('destaques', document.querySelector('.nav-btn'));
 };
 console.log("deploy refresh");
-
