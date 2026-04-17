@@ -144,9 +144,6 @@ texto: `<h1>Satélite brasileiro lançado</h1>
 }
 ],
 
-// ===============================
-// BRASIL
-// ===============================
 brasil: [
 {
 id: 6,
@@ -317,9 +314,6 @@ texto: `
 }
 ],
 
-// ===============================
-// MUNDO
-// ===============================
 mundo: [
 {
 id: 11,
@@ -535,10 +529,6 @@ texto: `
 }
 ],
 
-
-// ===============================
-// ECONOMIA
-// ===============================
 economia: [
 {
 id: 16,
@@ -648,9 +638,6 @@ Mesmo com os riscos, a presença dos jovens no mercado representa uma mudança i
 }
 ],
 
-// ===============================
-// HISTÓRICAS
-// ===============================
 historicas: [
 {
 id: 21,
@@ -786,9 +773,6 @@ Hoje, é impossível imaginar a vida sem internet. No entanto, o avanço tecnol�
 
 ],
 
-// ===============================
-// 🆕 NOVIDADES
-// ===============================
 novidades: [
 {
 id: 30,
@@ -846,9 +830,6 @@ texto: "<p>A empresa planeja adicionar um sistema simples de aviso quando novas 
 
 };
 
-// ===============================
-// CARROSSEL
-// ===============================
 let indexCarrossel = 0;
 
 function rodarCarrossel() {
@@ -861,9 +842,6 @@ function rodarCarrossel() {
 
 setInterval(rodarCarrossel, 4000);
 
-// ===============================
-// NAVEGAÇÃO
-// ===============================
 function navegar(pagina, botao) {
     paginaAtual = pagina;
 
@@ -877,7 +855,7 @@ function navegar(pagina, botao) {
     document.getElementById('view-sobre').style.display = 'none';
     document.getElementById('view-contato').style.display = 'none';
     document.getElementById('view-leitura').style.display = 'none';
-    document.getElementById('view-servicos').style.display = 'none'; // 👈 ESSENCIAL
+    document.getElementById('view-servicos').style.display = 'none'; 
 
     if (pagina === 'sobre') {
         document.getElementById('view-sobre').style.display = 'block';
@@ -895,15 +873,12 @@ function navegar(pagina, botao) {
         }
 
         document.getElementById('view-lista').style.display = 'grid';
-        renderizarGrid(pagina); // 👈 ESSENCIAL PARA VOLTAR AS NOTÍCIAS
+        renderizarGrid(pagina); 
     }
 
     window.scrollTo(0, 0);
 }
 
-// ===============================
-// GRID
-// ===============================
 function renderizarGrid(cat) {
     const grid = document.getElementById('view-lista');
     grid.innerHTML = "";
@@ -923,10 +898,6 @@ function renderizarGrid(cat) {
         `;
     });
 }
-
-// ===============================
-// ARTIGO
-// ===============================
 function abrirArtigo(cat, id) {
     categoriaAnterior = cat;
     const n = banco[cat].find(x => x.id === id);
@@ -960,9 +931,6 @@ function voltar() {
     navegar(categoriaAnterior);
 }
 
-// ===============================
-// FORMULÁRIO
-// ===============================
 function enviarDados() {
     const nome = document.getElementById('ipt-nome').value;
     const email = document.getElementById('ipt-email').value;
