@@ -921,9 +921,6 @@ function abrirArtigo(cat, id) {
     window.scrollTo(0, 0);
 }
 
-// ===============================
-// VOLTAR
-// ===============================
 function voltar() {
     document.getElementById('view-leitura').style.display = 'none';
     document.getElementById('navbar').style.display = 'block';
